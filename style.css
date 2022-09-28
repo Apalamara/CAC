@@ -1,3 +1,4 @@
+/* <!-- ------------ NAVBAR ------------ --> */
 .nav-link.stand-out {
     color: green;
 }
@@ -6,21 +7,41 @@
     color: rgb(0, 165, 0);
 }
 
+
+/* <!-- ------------ CARRUSEL ------------ --> */
 .bkg_opacity{
     filter: brightness(0.5);
 }
-
-.caption-right {
-    left: 40%;
-}
-
-.text-right {
-    text-align: right!important;
-}
-
-.d-flex.justify-content-end button {
+.d-flex button {
     margin-left: 10px!important;
 }
+
+/* Cuando la pantalla esta grande */
+@media only screen and (min-width: 700px){
+    .caption-right {
+        left: 40%;
+    }
+    
+    .text-right {
+        text-align: right!important;
+    }
+    
+    
+    .btn-carousel.d-flex{
+        justify-content: end;
+    }    
+}
+
+/* Cuando la pantalla esta chica */
+@media only screen and (max-width: 700px){
+    .btn-carousel.d-flex{
+        justify-content: center;
+    } 
+
+}
+
+
+/* <!-- ------------ CARDS ------------ --> */
 
 .badges-align span{
     margin: 0px 5px 12px 0px!important;
@@ -29,6 +50,8 @@
 .subrayado{
     border-bottom: 1px dotted black;
 }
+
+
 /* <!-- ------------ INFORMACION ------------ --> */
 
 .container-gral{
@@ -38,6 +61,19 @@
 .container-gral div {
     width: 50%;
 }
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 700px){
+
+    .informacion.container-gral{
+        display: flex;
+        flex-direction: column;
+    }
+    .informacion.container-gral div {
+        width: 100%;
+    }
+}
+
 
 /* <!-- ------------ FORMS ------------ --> */
 .container-form{
@@ -49,17 +85,10 @@
 }
 
 
+/* <!-- ------------ FOOTER ------------ --> */
 
-/* MEDIA QUERY */
-@media only screen and (max-width: 700px){
-    .mobile_img{
-        margin-top: 80px;
-    }
-    .container-gral{
-        display: flex;
-        flex-direction: column;
-    }
-    .container-gral div {
-        width: 100%;
-    }
+.footer .row {
+    --bs-gutter-x: 0!important;
 }
+
+
